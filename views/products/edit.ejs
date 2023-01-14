@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+</head>
+<body>
+    <h1>Add New Products</h1>
+    <form action="/products/<%= product.id %>?_method=PUT" method="POST">
+        <label for="Name">Product Name</label>
+        <input type="text" name="Name" id="Name" placeholder="Product Name" value="<%= product.Name %>">
+        <label for="Price">Product Price</label>
+        <input type="text" name="Price" id="Price" placeholder="Product Price" value="<%= product.Price %>">
+        <label for="Stock">Product Stock</label>
+        <input type="text" name="Stock" id="Stock" placeholder="Product Stock" value="<%= product.Stock %>">
+    <button>Update</button>
+    </form>
+    
+    <!-- <a href="/products"> Back to Home</a> -->
+    <a href="/products/">All Products </a>
+</body>
+</html>
